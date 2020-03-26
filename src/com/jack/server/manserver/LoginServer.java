@@ -28,7 +28,7 @@ public class LoginServer implements Runnable {
     public void run() {
         try {
             serverSocket = new ServerSocket(Integer.parseInt(PropertiesUtil.getValue("client.login.port")));
-            System.out.println("服务端已打开");
+            System.out.println("登录服务端已打开");
             while (true) {
                 Socket acceptsSocket = serverSocket.accept();
                 ois = new ObjectInputStream(acceptsSocket.getInputStream());

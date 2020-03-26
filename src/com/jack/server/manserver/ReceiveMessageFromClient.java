@@ -91,6 +91,7 @@ public class ReceiveMessageFromClient extends Thread {
                     System.out.println(id + "断开连接");
                 }
                 System.out.println(clientMap.entrySet());
+                isThisThreadIsAlive = false;
             }
         }
     }

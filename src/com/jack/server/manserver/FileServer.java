@@ -1,6 +1,7 @@
 package com.jack.server.manserver;
 
 import com.jack.server.common.ClientObj;
+import com.jack.server.util.PropertiesUtil;
 import com.jack.transfer.LoginRequest;
 
 import java.io.ObjectInputStream;
@@ -17,22 +18,15 @@ import java.net.Socket;
 public class FileServer implements Runnable {
     @Override
     public void run() {
-        /*try {
-            serverSocket = new ServerSocket(DEFAULT_PORT);
-            System.out.println("服务端已打开");
+        try {
+            ServerSocket serverSocket = new ServerSocket(Integer.parseInt(PropertiesUtil.getValue("client.file.port")));
+            System.out.println("文件服务端已打开");
             while (true) {
-                Socket acceptsSocket = serverSocket.accept();
-                ois = new ObjectInputStream(acceptsSocket.getInputStream());
-                oos = new ObjectOutputStream(acceptsSocket.getOutputStream());
-                LoginRequest loginRequest = (LoginRequest) ois.readObject();
-                ClientObj client = new ClientObj(acceptsSocket,ois,oos);
-                System.out.println(loginRequest.getUser() + "连接成功");
-                clientMap.put(loginRequest.getUser(), client);
-                System.out.println(clientMap.entrySet());
-                new ReceiveMessageFromClient(acceptsSocket, ois, oos, loginRequest.getUser()).start();
+                Socket accept = serverSocket.accept();
+                new Thread(new ReceiveFileFromClient("1",accept)).start();
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
     }
 }
