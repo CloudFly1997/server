@@ -4,7 +4,9 @@ import java.io.*;
 import java.net.Socket;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -41,6 +43,10 @@ public class ReceiveMessageFromClient extends Thread {
             Message message = (Message) object;
             System.out.println(message);
             List<String> users = MessageHandle.getNeedToPushUsers(message.getToUser());
+            if ("[GROUP]".equals(message.getType())) {
+                users = getGroupMembers(message.getToUser());
+                users.remove(message.getFromUser());
+            }
             System.out.println(users);
             for (String user : users) {
                 boolean isRead = false;
@@ -49,15 +55,13 @@ public class ReceiveMessageFromClient extends Thread {
                     client.getOos().writeObject(message);
                     isRead = true;
                 }
-                if ("[TXT]".equals(message.getType())) {
-                    writeTXTToDB(message, isRead);
-                }
+                writeTXTToDB(message, isRead);
             }
         }
         if (object instanceof FileMessage) {
-            FileMessage fileMessage = (FileMessage)object;
+            FileMessage fileMessage = (FileMessage) object;
             System.out.println(fileMessage);
-            new Thread(new ReceiveFileFromClient(id,socket)).start();
+            new Thread(new ReceiveFileFromClient(id, socket)).start();
         }
     }
 
@@ -65,8 +69,9 @@ public class ReceiveMessageFromClient extends Thread {
     public void writeTXTToDB(Message message, boolean isRead) {
         String insertSql = "INSERT INTO message(message_type,from_user,to_user,message_date,content,is_read) values(?,?,?,?,?,?)";
         Connection conn = DbUtil.getConnection();
+        PreparedStatement preparedStatement = null;
         try {
-            PreparedStatement preparedStatement = conn.prepareStatement(insertSql);
+            preparedStatement = conn.prepareStatement(insertSql);
             preparedStatement.setString(1, message.getType());
             preparedStatement.setString(2, message.getFromUser());
             preparedStatement.setString(3, message.getToUser());
@@ -76,7 +81,30 @@ public class ReceiveMessageFromClient extends Thread {
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            DbUtil.close(conn, null, preparedStatement);
         }
+    }
+
+    public List<String> getGroupMembers(String groupAccount) {
+        List<String> members = new ArrayList<>();
+        String sql = "SELECT user_id FROM chat.`group_member` WHERE group_id = ?";
+        Connection conn = DbUtil.getConnection();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setString(1,groupAccount);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                members.add(resultSet.getString("user_id"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DbUtil.close(conn,resultSet,preparedStatement);
+        }
+        return members;
     }
 
     @Override

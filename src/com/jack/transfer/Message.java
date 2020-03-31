@@ -14,6 +14,7 @@ public class Message implements Serializable{
 	private String messageContent;
 	private String dateTime;
 	private String type;
+	private boolean isRead;
 	
 	public Message(String fromUser, String toUser, String messageContent, String dateTime, String type) {
 		super();
@@ -57,6 +58,14 @@ public class Message implements Serializable{
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public boolean isRead() {
+		return isRead;
+	}
+
+	public void setRead(boolean read) {
+		isRead = read;
 	}
 
 	@Override

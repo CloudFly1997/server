@@ -39,6 +39,7 @@ public class ReceiveFileFromClient implements Runnable {
                 dos.write(buf, 0, len);
             }
             dos.flush();
+            socket.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
