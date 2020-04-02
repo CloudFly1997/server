@@ -4,15 +4,17 @@
     <list default="true" id="99bf93ef-f6d6-4c6a-8ab0-753945addc8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/launch/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/launch/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveFileFromClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveFileFromClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveFileFromClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveMessageFromClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveMessageFromClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/util/DbUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/util/DbUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resource/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jack/server/launch/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/launch/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/FileServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveFileFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveFileFromClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveMessageFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveMessageFromClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveFileFromClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveMessageFromClient.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jack/server/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/util/DbUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/transfer/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/transfer/Message.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,7 @@
       <recent name="com.jack.server" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jack.server.manserver" />
       <recent name="com.jack.server.util" />
       <recent name="com.jack.transfer" />
       <recent name="server" />
@@ -129,7 +132,8 @@
       <workItem from="1585574851272" duration="1879000" />
       <workItem from="1585648872498" duration="419000" />
       <workItem from="1585649337536" duration="868000" />
-      <workItem from="1585666862437" duration="5467000" />
+      <workItem from="1585666862437" duration="6067000" />
+      <workItem from="1585720288110" duration="13264000" />
     </task>
     <servers />
   </component>
@@ -161,26 +165,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585206515714" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585671120698">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585846135521">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585671120698" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585671120698">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585846135521" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585846135520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585671120698" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585671120697">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585846135520" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585846135520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585671120697" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585671120698">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585846135520" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585846135520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585671120698" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585846135520" />
     <state x="272" y="58" key="SettingsEditor" timestamp="1585649301525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585649301525" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585846064559">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1585846064559" />
     <state x="457" y="167" width="621" height="490" key="find.popup" timestamp="1585148414539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

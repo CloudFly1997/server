@@ -58,11 +58,7 @@ public class ReceiveMessageFromClient extends Thread {
                 writeTXTToDB(message, isRead);
             }
         }
-        if (object instanceof FileMessage) {
-            FileMessage fileMessage = (FileMessage) object;
-            System.out.println(fileMessage);
-            new Thread(new ReceiveFileFromClient(id, socket)).start();
-        }
+
     }
 
 
