@@ -24,6 +24,7 @@ public class FileDownLoadServer implements Runnable {
                 System.out.println("下载请求");
                 DataInputStream dis = new DataInputStream(accept.getInputStream());
                 String name = dis.readUTF();
+                System.out.println("下载请求"+name);
                 //根据文件名在服务器存储文件中找到文件
                 File file = new File(PropertiesUtil.getValue("server.file.save.path") + name);
                 //创建图片字节流

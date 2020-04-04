@@ -1,8 +1,6 @@
 package com.jack.server.manserver;
 
-import com.jack.server.common.ClientObj;
 import com.jack.server.util.PropertiesUtil;
-import com.jack.transfer.LoginRequest;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -25,7 +23,11 @@ public class FileUpLoadServer implements Runnable {
                 Socket accept = serverSocket.accept();
                 DataInputStream dis = new DataInputStream(accept.getInputStream());
                 String name = dis.readUTF();
+                System.out.println("上传请求"+name);
                 File file = new File(PropertiesUtil.getValue("server.file.save.path") + name);
+                if (!file.exists()) {
+                    file.createNewFile();
+                }
                 //创建图片字节流
                 FileOutputStream fos = new FileOutputStream(file);
                 byte[] buf = new byte[1024];
@@ -33,6 +35,7 @@ public class FileUpLoadServer implements Runnable {
                 //往字节流里写图片数据
                 while ((len = dis.read(buf)) != -1) {
                     fos.write(buf, 0, len);
+                    fos.flush();
                 }
                 fos.close();
                 dis.close();

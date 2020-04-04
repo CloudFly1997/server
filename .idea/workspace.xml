@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="99bf93ef-f6d6-4c6a-8ab0-753945addc8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/launch/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/launch/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveFileFromClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveMessageFromClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveMessageFromClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/util/DbUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/util/DbUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resource/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/launch/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/launch/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveFileFromClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveMessageFromClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/util/DbUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileDownLoadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileDownLoadServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileUpLoadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileUpLoadServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileDownLoadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/FileDownLoadServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileUpLoadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/FileUpLoadServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +125,11 @@
       <workItem from="1585648872498" duration="419000" />
       <workItem from="1585649337536" duration="868000" />
       <workItem from="1585666862437" duration="6067000" />
-      <workItem from="1585720288110" duration="13264000" />
+      <workItem from="1585720288110" duration="13910000" />
+      <workItem from="1585851678651" duration="19000" />
+      <workItem from="1585895209145" duration="9780000" />
+      <workItem from="1585977357802" duration="1772000" />
+      <workItem from="1585983849545" duration="1348000" />
     </task>
     <servers />
   </component>
@@ -165,22 +161,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585206515714" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585846135521">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585989057523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585846135521" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585846135520">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585989057523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585846135520" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585846135520">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585989057523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585846135520" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585846135520">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585989057523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585846135520" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
     <state x="272" y="58" key="SettingsEditor" timestamp="1585649301525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
