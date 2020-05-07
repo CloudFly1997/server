@@ -1,4 +1,4 @@
-package com.jack.server.manserver;
+package com.jack.server.main;
 
 import com.jack.server.util.PropertiesUtil;
 
@@ -12,32 +12,31 @@ import java.net.Socket;
  * @date 2020/3/26 20:43
  */
 
-public class FileUpLoadServer implements Runnable {
+public class FileDownLoadServer implements Runnable {
     @Override
     public void run() {
         try {
             ServerSocket serverSocket =
-                    new ServerSocket(Integer.parseInt(PropertiesUtil.getValue("client.file.upload_port")));
-            System.out.println("文件上传服务端已打开");
+                    new ServerSocket(Integer.parseInt(PropertiesUtil.getValue("client.file.download_port")));
+            System.out.println("文件下载服务端已打开");
             while (true) {
                 Socket accept = serverSocket.accept();
+                System.out.println(accept+"下载请求");
                 DataInputStream dis = new DataInputStream(accept.getInputStream());
                 String name = dis.readUTF();
-                System.out.println("上传请求"+name);
+                System.out.println("下载请求"+name);
+                //根据文件名在服务器存储文件中找到文件
                 File file = new File(PropertiesUtil.getValue("server.file.save.path") + name);
-                if (!file.exists()) {
-                    file.createNewFile();
-                }
                 //创建图片字节流
-                FileOutputStream fos = new FileOutputStream(file);
-                byte[] buf = new byte[1024];
+                DataInputStream fileInputStream = new DataInputStream(new FileInputStream(file));
+                DataOutputStream dos = new DataOutputStream(accept.getOutputStream());
+                byte[] bytes = new byte[1024];
                 int len = 0;
-                //往字节流里写图片数据
-                while ((len = dis.read(buf)) != -1) {
-                    fos.write(buf, 0, len);
-                    fos.flush();
+                while ((len = fileInputStream.read(bytes)) != -1) {
+                    dos.write(bytes, 0, len);
                 }
-                fos.close();
+                accept.shutdownOutput();
+                dos.close();
                 dis.close();
             }
         } catch (FileNotFoundException e) {

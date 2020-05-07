@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="server:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="99bf93ef-f6d6-4c6a-8ab0-753945addc8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileDownLoadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileDownLoadServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileUpLoadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileUpLoadServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileDownLoadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/FileDownLoadServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileUpLoadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/manserver/FileUpLoadServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/META-INF/server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/common/ClientMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/common/ClientObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/common/MessageHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/launch/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileDownLoadServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/FileUpLoadServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/LoginServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/manserver/ReceiveMessageFromClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/util/DbUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/server/util/PropertiesUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/transfer/FileMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/transfer/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/com/jack/transfer/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/server/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/launch/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/launch/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileDownLoadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/main/FileDownLoadServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/FileUpLoadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/main/FileUpLoadServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/LoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/main/LoginServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jack/server/manserver/ReceiveMessageFromClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jack/server/main/ReceiveMessageFromClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +58,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2908046" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -76,7 +100,7 @@
       <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jack.server.manserver.*" />
+          <option name="PATTERN" value="com.jack.server.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,6 +154,19 @@
       <workItem from="1585895209145" duration="9780000" />
       <workItem from="1585977357802" duration="1772000" />
       <workItem from="1585983849545" duration="1348000" />
+      <workItem from="1586008239623" duration="8643000" />
+      <workItem from="1586156884776" duration="8000" />
+      <workItem from="1586239661556" duration="2720000" />
+      <workItem from="1586588888623" duration="2031000" />
+      <workItem from="1587055863668" duration="1994000" />
+      <workItem from="1587309272669" duration="2887000" />
+      <workItem from="1587447538793" duration="2824000" />
+      <workItem from="1587487079773" duration="897000" />
+      <workItem from="1587488039764" duration="4145000" />
+      <workItem from="1587909223288" duration="3238000" />
+      <workItem from="1588231831672" duration="1211000" />
+      <workItem from="1588514896036" duration="2873000" />
+      <workItem from="1588687873515" duration="11621000" />
     </task>
     <servers />
   </component>
@@ -137,22 +174,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="74" key="#HTTP_Proxy" timestamp="1585648976766">
+    <state x="361" y="16" key="#Custom_Plugin_Repositories" timestamp="1587489207856">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1585648976766" />
+    <state x="361" y="16" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1587489207856" />
+    <state x="361" y="74" key="#HTTP_Proxy" timestamp="1587487706575">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1587487706575" />
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585152648807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585152648807" />
-    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser" timestamp="1585576820526">
+    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser" timestamp="1588870129096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585576820526" />
+    <state x="574" y="132" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588870129096" />
     <state x="499" y="194" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585198967083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="194" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1585198967083" />
+    <state x="522" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586094424441">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="522" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1586094424441" />
     <state x="553" y="324" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1585198968226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -161,26 +206,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585206515714" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585989057523">
+    <state x="522" y="171" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1586094310530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585989057523">
+    <state x="522" y="171" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586094310530" />
+    <state x="572" y="157" key="FileChooserDialogImpl" timestamp="1586016945651">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585989057523">
+    <state x="572" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586016945651" />
+    <state width="1478" height="207" key="GridCell.Tab.0.bottom" timestamp="1588869993127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585989057523">
+    <state width="1478" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588869993127" />
+    <state width="1478" height="207" key="GridCell.Tab.0.center" timestamp="1588869993127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585989057523" />
-    <state x="272" y="58" key="SettingsEditor" timestamp="1585649301525">
+    <state width="1478" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588869993127" />
+    <state width="1478" height="207" key="GridCell.Tab.0.left" timestamp="1588869993127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585649301525" />
+    <state width="1478" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588869993127" />
+    <state width="1478" height="207" key="GridCell.Tab.0.right" timestamp="1588869993127">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1478" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588869993127" />
+    <state x="272" y="0" key="SettingsEditor" timestamp="1587540505334">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587540505334" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1585846064559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

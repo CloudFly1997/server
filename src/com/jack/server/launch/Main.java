@@ -1,8 +1,8 @@
 package com.jack.server.launch;
 
-import com.jack.server.manserver.FileDownLoadServer;
-import com.jack.server.manserver.FileUpLoadServer;
-import com.jack.server.manserver.LoginServer;
+import com.jack.server.main.FileDownLoadServer;
+import com.jack.server.main.FileUpLoadServer;
+import com.jack.server.main.LoginServer;
 
 /**
  * @author Jinkang He

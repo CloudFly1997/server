@@ -1,4 +1,4 @@
-package com.jack.server.manserver;
+package com.jack.server.main;
 
 import java.io.*;
 import java.net.Socket;
@@ -14,7 +14,6 @@ import com.jack.server.common.ClientMap;
 import com.jack.server.common.ClientObj;
 import com.jack.server.util.DbUtil;
 import com.jack.server.common.MessageHandle;
-import com.jack.transfer.FileMessage;
 import com.jack.transfer.Message;
 
 
@@ -49,21 +48,19 @@ public class ReceiveMessageFromClient extends Thread {
             }
             System.out.println(users);
             for (String user : users) {
-                boolean isRead = false;
                 if (clientMap.containsKey(user)) {
                     ClientObj client = clientMap.get(user);
                     client.getOos().writeObject(message);
-                    isRead = true;
                 }
-                writeTXTToDB(message, isRead);
+                writeTXTToDB(message);
             }
         }
 
     }
 
 
-    public void writeTXTToDB(Message message, boolean isRead) {
-        String insertSql = "INSERT INTO message(message_type,from_user,to_user,message_date,content,is_read) values(?,?,?,?,?,?)";
+    public void writeTXTToDB(Message message) {
+        String insertSql = "INSERT INTO message(message_type,from_user,to_user,message_date,content) values(?,?,?,?,?)";
         Connection conn = DbUtil.getConnection();
         PreparedStatement preparedStatement = null;
         try {
@@ -73,7 +70,6 @@ public class ReceiveMessageFromClient extends Thread {
             preparedStatement.setString(3, message.getToUser());
             preparedStatement.setString(4, message.getDateTime());
             preparedStatement.setString(5, message.getMessageContent());
-            preparedStatement.setBoolean(6, isRead);
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();

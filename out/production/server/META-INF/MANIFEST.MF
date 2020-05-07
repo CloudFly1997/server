@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.jack.server.launch.Main
+Class-Path: mysql-connector-java-5.1.45-bin.jar
+
